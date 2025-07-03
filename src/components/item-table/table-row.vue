@@ -2,38 +2,36 @@
 import type { ItemType } from "@/types/items"
 import { useItemsStore } from "@/stores/items"
 import ApproveItemButton from "@/components/approve-item-button.vue"
+import { CheckCircle } from "lucide-vue-next"
 
 const { item } = defineProps<{ item: ItemType }>()
 const { getStatusColor } = useStatusColor()
 
-const { approveItem, items } = useItemsStore()
-const { selectItem } = useCheckedItemsStore()
-
-const isCheckedItem = ref(false)
+const { approveItem, selectItem, selectedItems } = useItemsStore()
 
 function handleApprove(itemId: number) {
 	approveItem(itemId)
 }
 
-function toggleCheckbox() {
-	if (items.some((i) => i.id === item.id && i.status === "APPROVED")) {
-		return
-	}
-
-	isCheckedItem.value = !isCheckedItem.value
-	selectItem(item.id)
+function handleSelectItem(itemId: number) {
+	selectItem(itemId)
 }
 </script>
 
 <template>
 	<tr class="hover:bg-gray-50">
 		<td class="px-4 py-4 whitespace-nowrap">
-			<input
-				type="checkbox"
-				@change="toggleCheckbox"
-				:checked="isCheckedItem"
-				class="h-4 w-4 text-emerald-600 focus:ring-emerald-500 border-gray-300 rounded"
-			/>
+			<div
+				@click="handleSelectItem(item.id)"
+				class="h-5 w-5 cursor-pointer border text-emerald-600 focus:ring-emerald-500 border-gray-300 rounded-full"
+			>
+				<span
+					v-if="item.isSelected"
+					class="flex items-center justify-center bg-emerald-600 text-white rounded-full h-full w-full"
+				>
+					<CheckCircle class="h-5 w-5" />
+				</span>
+			</div>
 		</td>
 
 		<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
