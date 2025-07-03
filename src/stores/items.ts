@@ -19,6 +19,15 @@ export const useItemsStore = defineStore("items", {
 				item.status = "APPROVED"
 			}
 		},
+		approveSelectedsItems(itemsIdToApprove: number[]) {
+			console.log("Items to approve:", itemsIdToApprove)
+			this.items = this.items.map((item) => {
+				if (itemsIdToApprove.includes(item.id) && item.status === "PENDING") {
+					item.status = "APPROVED"
+				}
+				return item
+			})
+		},
 	},
 	getters: {
 		totalIItems: (state) => state.items.length,
