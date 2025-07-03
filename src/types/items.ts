@@ -14,6 +14,6 @@ export interface ItemType {
 	status: ItemStatus
 }
 export interface ApproveItemButtonProps {
-	itemId: number
+	item: ItemType
 	handleApprove: (itemId: number) => void
 }

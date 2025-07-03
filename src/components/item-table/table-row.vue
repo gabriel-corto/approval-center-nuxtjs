@@ -41,7 +41,7 @@ function handleApprove(itemId: number) {
 		</td>
 
 		<ApproveItemButton
-			:item-id="item.id"
+			:item="item"
 			:handleApprove="() => handleApprove(item.id)"
 		/>
 	</tr>
