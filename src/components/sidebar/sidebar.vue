@@ -12,7 +12,7 @@ import {
 
 <template>
 	<aside
-		class="w-72 bg-white border-r border-neutral-200 p-4 flex flex-col h-screen"
+		class="w-76 bg-white border-r border-neutral-200 p-4 flex flex-col h-screen"
 	>
 		<div class="mb-8 p-4">
 			<h1 class="text-2xl font-bold text-emerald-700 flex items-center gap-3">
@@ -20,7 +20,7 @@ import {
 					<LineChart class="h-6 w-6" />
 				</span>
 
-				<span class="text-lg font-bold">Aprovações</span>
+				<span class="text-lg font-bold leading-5">Central de Aprovações</span>
 			</h1>
 		</div>
 

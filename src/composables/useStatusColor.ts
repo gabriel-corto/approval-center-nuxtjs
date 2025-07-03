@@ -1,4 +1,4 @@
-import type { ItemStatus } from "../types/process"
+import type { ItemStatus } from "../types/items"
 
 export function useStatusColor() {
 	function getStatusColor(status: ItemStatus) {

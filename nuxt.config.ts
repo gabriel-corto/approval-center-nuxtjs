@@ -4,7 +4,12 @@ export default defineNuxtConfig({
 	srcDir: "src",
 	components: true,
 	css: ["@/css/main.css"],
-	modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "@nuxt/ui"],
+	modules: [
+		"@nuxtjs/tailwindcss",
+		"@nuxtjs/google-fonts",
+		"@nuxt/ui",
+		"@pinia/nuxt",
+	],
 	googleFonts: {
 		families: {
 			Inter: [400, 500, 600, 700],
