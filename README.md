@@ -1,18 +1,37 @@
-# Requisitos do software
+# Resolução Teste - Painel de Aprovações (Nuxtjs)
 
-- [x] Listagem de aprovações pendentes.
-- [x] Cada item deve conter: id, name, type, status (PENDING, APPROVED).
-- [x] Botão de "Aprovar" em cada item.
-- [x] Caixa de seleção para selecionar um ou mais itens.
-- [x] Mudança de status do item para APPROVED após aprovação.
-- [ ] Ação em massa: botão "Aprovar Selecionados".
-- [x] Estado global com Pinia.
-- [x] Interface estilizada com Tailwind e componentes do Nuxt UI.
+Aplicação construída como solução para o desafio técnico proposto pela equipe da Statement Labs.
 
-# O que será avaliado?
+## Descrição
 
-- [x] Clareza e organização do código.
-- [x] Uso correto da stack (Nuxt, Tailwind, Pinia).
-- [] Lógica para ações em massa.
-- [x] Boas práticas de componentes e composição.
-- [x] Experiência de usuário.
+Este projeto exibe uma listagem de aprovações pendentes, permitindo ações individuais e em massa. Desenvolvido com **Vue 3**, **Nuxt 3**, **Pinia**, **TailwindCSS** e **Nuxt UI**!
+
+## Funcionalidades
+
+- Listagem de itens com `id`, `name`, `type` e `status`.
+- Botão de **Aprovar** individual por item.
+- Botão **Aprovar Selecionados** para ações em massa.
+- Atualização de status para `APPROVED`.
+- Gerenciamento de estado global com **Pinia**.
+- Estilização com **TailwindCSS** e **Nuxt UI**.
+- Tipagem em **TypeScript**.
+- Organização de pastas seguindo convenções do Nuxt.
+
+## Tecnologias
+
+- [Nuxt 3](https://nuxt.com/)
+- [Vue 3 - Composition API](https://vuejs.org/)
+- [Pinia](https://pinia.vuejs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Nuxt UI](https://ui.nuxt.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [pnpm](https://pnpm.io/) para gerenciamento de pacotes
+
+## Como executar?
+
+```bash
+git clone https://github.com/gabriel-corto/approval-center-nuxtjs.git
+cd approval-app
+pnpm install
+pnpm dev
+```
