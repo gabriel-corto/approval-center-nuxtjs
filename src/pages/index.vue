@@ -7,7 +7,7 @@ useHead({
 	title: "Central de Aprovações | Dashboard",
 })
 
-import Headline from "../components/headline.vue"
+import Headline from "../components/headline/headline.vue"
 import TableRow from "../components/item-table/table-row.vue"
 
 import TableHead from "../components/item-table/table-head.vue"

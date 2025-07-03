@@ -1,16 +1,27 @@
 <script setup lang="ts">
-import { useItemsStore } from "@/stores/items"
-
 import type { ItemType } from "@/types/items"
+import { useItemsStore } from "@/stores/items"
 import ApproveItemButton from "@/components/approve-item-button.vue"
 
 const { item } = defineProps<{ item: ItemType }>()
 const { getStatusColor } = useStatusColor()
 
-const { approveItem } = useItemsStore()
+const { approveItem, items } = useItemsStore()
+const { selectItem } = useCheckedItemsStore()
+
+const isCheckedItem = ref(false)
 
 function handleApprove(itemId: number) {
 	approveItem(itemId)
+}
+
+function toggleCheckbox() {
+	if (items.some((i) => i.id === item.id && i.status === "APPROVED")) {
+		return
+	}
+
+	isCheckedItem.value = !isCheckedItem.value
+	selectItem(item.id)
 }
 </script>
 
@@ -19,6 +30,8 @@ function handleApprove(itemId: number) {
 		<td class="px-4 py-4 whitespace-nowrap">
 			<input
 				type="checkbox"
+				@change="toggleCheckbox"
+				:checked="isCheckedItem"
 				class="h-4 w-4 text-emerald-600 focus:ring-emerald-500 border-gray-300 rounded"
 			/>
 		</td>

@@ -4,7 +4,7 @@ export function useStatusColor() {
 	function getStatusColor(status: ItemStatus) {
 		switch (status) {
 			case "PENDING":
-				return { text: "Pendente", color: "bg-yellow-100 text-yellow-800" }
+				return { text: "Pendente", color: "bg-neutral-100 text-neutral-800" }
 			case "APPROVED":
 				return { text: "Aprovado", color: "bg-green-100 text-green-800" }
 			case "REJECTED":
