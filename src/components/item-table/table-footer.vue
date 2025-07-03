@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { useItemsStore } from "@/stores/items/store"
 import { storeToRefs } from "pinia"
+
 const { totalIItems, totalApprovedItems } = storeToRefs(useItemsStore())
 </script>
 

@@ -1,5 +1,7 @@
 <script setup>
+import { useItemsStore } from "@/stores/items/store"
 import { Circle } from "lucide-vue-next"
+import { storeToRefs } from "pinia"
 
 const { selectedItems } = storeToRefs(useItemsStore())
 const { selectAllItems } = useItemsStore()

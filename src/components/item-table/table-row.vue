@@ -1,13 +1,14 @@
 <script setup lang="ts">
 import type { ItemType } from "@/types/items"
-import { useItemsStore } from "@/stores/items"
+
+import { useItemsStore } from "@/stores/items/store"
 import ApproveItemButton from "@/components/approve-item-button.vue"
 import { CheckCircle } from "lucide-vue-next"
 
 const { item } = defineProps<{ item: ItemType }>()
 const { getStatusColor } = useStatusColor()
 
-const { approveItem, selectItem, selectedItems } = useItemsStore()
+const { approveItem, selectItem } = useItemsStore()
 
 function handleApprove(itemId: number) {
 	approveItem(itemId)

@@ -13,6 +13,8 @@ import TableRow from "../components/item-table/table-row.vue"
 import TableHead from "../components/item-table/table-head.vue"
 import TableFooter from "../components/item-table/table-footer.vue"
 
+import { useItemsStore } from "@/stores/items/store"
+
 const { items } = useItemsStore()
 </script>
 
