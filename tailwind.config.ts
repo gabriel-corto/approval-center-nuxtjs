@@ -1,4 +1,6 @@
-export default {
+import type { Config } from "tailwindcss"
+
+const config: Config = {
 	content: [
 		"./components/**/*.{vue,js,ts}",
 		"./layouts/**/*.vue",
@@ -14,3 +16,5 @@ export default {
 	},
 	plugins: [],
 }
+
+export default config

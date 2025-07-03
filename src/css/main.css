@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import "@nuxt/ui";
+
+@theme {
+	--font-sans: "Public Sans", sans-serif;
+}

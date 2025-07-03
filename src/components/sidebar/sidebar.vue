@@ -20,7 +20,7 @@ import {
 					<LineChart class="h-6 w-6" />
 				</span>
 
-				<span class="text-lg">Approvaki</span>
+				<span class="text-lg font-bold">Aprovações</span>
 			</h1>
 		</div>
 
